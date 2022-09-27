@@ -5,11 +5,12 @@ const button = document.getElementById('btn')
 //Taget color
 const color = document.querySelector('.color')
 
-//button gets random color from array when clicked.
+//button gets random colour from array when clicked.
 button.addEventListener('click', function(){
-   document.body.style.backgroundColor = getRandomNumber()
-   color.textContent = getRandomNumber()
+    const randomNumber = getRandomNumber()
+   document.body.style.backgroundColor = colors[randomNumber]
+   color.textContent = colors[randomNumber]
 })
 function getRandomNumber(){
-    return colors[Math.floor(Math.random() * colors.length)]
+    return Math.floor(Math.random() * colors.length)
 }
